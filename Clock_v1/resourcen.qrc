@@ -1,0 +1,60 @@
+<RCC>
+    <qresource prefix="/themes/classic">
+        <file>Themes/classic/resetbtn.png</file>
+        <file>Themes/classic/startbtn.png</file>
+        <file>Themes/classic/stopbtn.png</file>
+        <file>Themes/classic/ClassicTheme.png</file>
+        <file>Themes/classic/analogbtn.png</file>
+        <file>Themes/classic/analogbtn_check.png</file>
+        <file>Themes/classic/down.png</file>
+        <file>Themes/classic/up.png</file>
+        <file>Themes/classic/add.png</file>
+        <file>Themes/classic/edit.png</file>
+        <file>Themes/classic/statistic.png</file>
+        <file>Themes/classic/frame.png</file>
+    </qresource>
+    <qresource prefix="/themes/splatoon">
+        <file>Themes/Splatoon/spltnbtn.png</file>
+        <file>Themes/Splatoon/startbtn.png</file>
+        <file>Themes/Splatoon/resetbtn.png</file>
+        <file>Themes/Splatoon/SplatoonTheme.png</file>
+        <file>Themes/Splatoon/stopbtn.png</file>
+        <file>Themes/Splatoon/analogbtn.png</file>
+        <file>Themes/Splatoon/analogbtn_check.png</file>
+        <file>Themes/Splatoon/down.png</file>
+        <file>Themes/Splatoon/up.png</file>
+        <file>Themes/Splatoon/add.png</file>
+        <file>Themes/Splatoon/edit.png</file>
+        <file>Themes/Splatoon/frame.png</file>
+        <file>Themes/Splatoon/statistic.png</file>
+    </qresource>
+    <qresource prefix="/themes/green">
+        <file>Themes/Green/Green_Theme.png</file>
+        <file>Themes/Green/resetbtn.png</file>
+        <file>Themes/Green/startbtn.png</file>
+        <file>Themes/Green/stopbtn.png</file>
+        <file>Themes/Green/analogbtn.png</file>
+        <file>Themes/Green/analogbtn_check.png</file>
+        <file>Themes/Green/down.png</file>
+        <file>Themes/Green/up.png</file>
+        <file>Themes/Green/add.png</file>
+        <file>Themes/Green/edit.png</file>
+        <file>Themes/Green/statistic.png</file>
+    </qresource>
+    <qresource prefix="/themes/red">
+        <file>Themes/Red/Red_Theme.png</file>
+        <file>Themes/Red/resetbtn.png</file>
+        <file>Themes/Red/startbtn.png</file>
+        <file>Themes/Red/stopbtn.png</file>
+        <file>Themes/Red/analogbtn.png</file>
+        <file>Themes/Red/analogbtn_check.png</file>
+        <file>Themes/Red/down.png</file>
+        <file>Themes/Red/up.png</file>
+        <file>Themes/Red/add.png</file>
+        <file>Themes/Red/edit.png</file>
+        <file>Themes/Red/statistic.png</file>
+    </qresource>
+    <qresource prefix="/alarmClock">
+        <file>AlarmClock/Timer1.wav</file>
+    </qresource>
+</RCC>

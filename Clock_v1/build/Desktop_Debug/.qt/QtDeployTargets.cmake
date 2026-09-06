@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_Clock_v1_FILE /home/nausch/QTProjekts/Clock_v1/build/Desktop_Debug/Clock_v1)
+set(__QT_DEPLOY_TARGET_Clock_v1_TYPE EXECUTABLE)
