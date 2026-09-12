@@ -15,6 +15,8 @@ public:
     explicit ManageSubjectDialog(QWidget *parent = nullptr);
     ~ManageSubjectDialog();
 
+    void applyTheme(QString themePath);
+
 private slots:
     void on_close_studie_clicked();
 
@@ -25,6 +27,9 @@ private slots:
     void on_addSubject_clicked();
 
     void refreshList();
+
+    void animateButtonClick(QPushButton *button, QSize normalSize, QSize pressedSize);
+
 
 private:
     Ui::ManageSubjectDialog *ui;

@@ -114,8 +114,11 @@
          <height>32</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/themes/classic/Themes/classic/cancel.png);</string>
+       </property>
        <property name="text">
-        <string>Cancel</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -140,8 +143,11 @@
          <height>32</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/themes/classic/Themes/classic/finish.png);</string>
+       </property>
        <property name="text">
-        <string>Finish</string>
+        <string/>
        </property>
        <property name="default">
         <bool>true</bool>

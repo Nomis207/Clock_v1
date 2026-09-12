@@ -22,18 +22,38 @@
      <height>192</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">
+
+</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="resetStudieTotal">
    <property name="geometry">
     <rect>
      <x>50</x>
      <y>280</y>
-     <width>96</width>
-     <height>27</height>
+     <width>128</width>
+     <height>32</height>
     </rect>
    </property>
+   <property name="minimumSize">
+    <size>
+     <width>128</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>128</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/themes/classic/Themes/classic/resetbtn.png);</string>
+   </property>
    <property name="text">
-    <string>resetTotal</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="deletSubject">
@@ -41,38 +61,83 @@
     <rect>
      <x>240</x>
      <y>280</y>
-     <width>96</width>
-     <height>27</height>
+     <width>128</width>
+     <height>32</height>
     </rect>
    </property>
+   <property name="minimumSize">
+    <size>
+     <width>128</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>128</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/themes/classic/Themes/classic/delete.png);</string>
+   </property>
    <property name="text">
-    <string>delete</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="addSubject">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>480</x>
      <y>280</y>
-     <width>96</width>
-     <height>27</height>
+     <width>32</width>
+     <height>32</height>
     </rect>
    </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/themes/classic/Themes/classic/add.png);</string>
+   </property>
    <property name="text">
-    <string>+</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="close_studie">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>10</y>
-     <width>96</width>
-     <height>27</height>
+     <x>420</x>
+     <y>20</y>
+     <width>128</width>
+     <height>32</height>
     </rect>
    </property>
+   <property name="minimumSize">
+    <size>
+     <width>128</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>128</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/themes/classic/Themes/classic/close.png);</string>
+   </property>
    <property name="text">
-    <string>close</string>
+    <string/>
    </property>
   </widget>
  </widget>

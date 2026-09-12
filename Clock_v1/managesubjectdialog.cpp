@@ -4,6 +4,7 @@
 
 #include <QSettings>
 #include <QTime>
+#include <QPropertyAnimation>
 
 ManageSubjectDialog::ManageSubjectDialog(QWidget *parent)
     : QDialog(parent)
@@ -21,6 +22,7 @@ ManageSubjectDialog::~ManageSubjectDialog()
 //button
 void ManageSubjectDialog::on_close_studie_clicked()
 {
+    animateButtonClick(ui->close_studie, QSize(128,32), QSize(100, 24));
     this->close();
 }
 
@@ -36,6 +38,7 @@ void ManageSubjectDialog::on_resetStudieTotal_clicked()
     QSettings settings("MeineApp", "Clock_v1");
     settings.setValue("Faecher/" + subjectName, 0);
 
+    animateButtonClick(ui->resetStudieTotal, QSize(128,32), QSize(100, 24));
     refreshList();
 }
 
@@ -51,11 +54,13 @@ void ManageSubjectDialog::on_deletSubject_clicked()
     QSettings settings("MeineApp", "Clock_v1");
     settings.remove("Faecher/" + subjectName);
 
+    animateButtonClick(ui->deletSubject, QSize(128,32), QSize(100, 24));
     refreshList();
 }
 
 void ManageSubjectDialog::on_addSubject_clicked()
 {
+    animateButtonClick(ui->addSubject, QSize(32,32), QSize(20, 20));
     AddSubjectDialog dialog(this);
     if (dialog.exec() == QDialog::Accepted) {
         QString newSubject = dialog.getSubjectName();
@@ -88,6 +93,46 @@ void ManageSubjectDialog::refreshList(){
     settings.endGroup();
 }
 
+void ManageSubjectDialog::applyTheme(QString themePath){
+
+    QString fullClosePath     = themePath + "close.png";
+    QString fullDeletePath    = themePath + "delete.png";
+    QString fullResetPath     = themePath + "resetbtn.png";
+    QString fullAddPath       = themePath + "add.png";
+
+    //close
+    ui->close_studie->setIcon(QIcon(fullClosePath));
+    ui->close_studie->setIconSize(QSize(128,32));
+
+    //delete
+    ui->deletSubject->setIcon(QIcon(fullDeletePath));
+    ui->deletSubject->setIconSize(QSize(128,32));
+
+    //reset
+    ui->resetStudieTotal->setIcon(QIcon(fullResetPath));
+    ui->resetStudieTotal->setIconSize(QSize(128,32));
+
+    //add
+    ui->addSubject->setIcon(QIcon(fullAddPath));
+    ui->addSubject->setIconSize(QSize(32,32));
+
+    //transparentStyle
+    QString transparentstyle = "border: none; background: transparent;";
+
+    ui->close_studie->setStyleSheet(transparentstyle);
+    ui->deletSubject->setStyleSheet(transparentstyle);
+    ui->resetStudieTotal->setStyleSheet(transparentstyle);
+}
+
+//animation
+void ManageSubjectDialog::animateButtonClick(QPushButton *button, QSize normalSize, QSize pressedSize){
+    QPropertyAnimation *animation = new QPropertyAnimation(button, "iconSize");
+    animation->setDuration(150);
+    animation->setKeyValueAt(0, normalSize);
+    animation->setKeyValueAt(0.5, pressedSize);
+    animation->setKeyValueAt(1, normalSize);
+    animation->start(QAbstractAnimation::DeleteWhenStopped);
+}
 
 
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'addsubjectdialog.ui'
 **
-** Created by: Qt User Interface Compiler version 6.11.1
+** Created by: Qt User Interface Compiler version 6.11.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -94,6 +94,7 @@ public:
         cancelbtn = new QPushButton(AddSubjectDialog);
         cancelbtn->setObjectName("cancelbtn");
         cancelbtn->setMinimumSize(QSize(128, 32));
+        cancelbtn->setStyleSheet(QString::fromUtf8("border-image: url(:/themes/classic/Themes/classic/cancel.png);"));
 
         horizontalLayout_2->addWidget(cancelbtn);
 
@@ -104,6 +105,7 @@ public:
         finishbtn = new QPushButton(AddSubjectDialog);
         finishbtn->setObjectName("finishbtn");
         finishbtn->setMinimumSize(QSize(128, 32));
+        finishbtn->setStyleSheet(QString::fromUtf8("border-image: url(:/themes/classic/Themes/classic/finish.png);"));
 
         horizontalLayout_2->addWidget(finishbtn);
 
@@ -123,8 +125,8 @@ public:
     {
         AddSubjectDialog->setWindowTitle(QCoreApplication::translate("AddSubjectDialog", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("AddSubjectDialog", "Enter new subject", nullptr));
-        cancelbtn->setText(QCoreApplication::translate("AddSubjectDialog", "Cancel", nullptr));
-        finishbtn->setText(QCoreApplication::translate("AddSubjectDialog", "Finish", nullptr));
+        cancelbtn->setText(QString());
+        finishbtn->setText(QString());
     } // retranslateUi
 
 };

@@ -12,6 +12,10 @@
         <file>Themes/classic/edit.png</file>
         <file>Themes/classic/statistic.png</file>
         <file>Themes/classic/frame.png</file>
+        <file>Themes/classic/cancel.png</file>
+        <file>Themes/classic/close.png</file>
+        <file>Themes/classic/delete.png</file>
+        <file>Themes/classic/finish.png</file>
     </qresource>
     <qresource prefix="/themes/splatoon">
         <file>Themes/Splatoon/spltnbtn.png</file>
@@ -27,6 +31,10 @@
         <file>Themes/Splatoon/edit.png</file>
         <file>Themes/Splatoon/frame.png</file>
         <file>Themes/Splatoon/statistic.png</file>
+        <file>Themes/Splatoon/cancel.png</file>
+        <file>Themes/Splatoon/close.png</file>
+        <file>Themes/Splatoon/delete.png</file>
+        <file>Themes/Splatoon/finish.png</file>
     </qresource>
     <qresource prefix="/themes/green">
         <file>Themes/Green/Green_Theme.png</file>
@@ -40,6 +48,11 @@
         <file>Themes/Green/add.png</file>
         <file>Themes/Green/edit.png</file>
         <file>Themes/Green/statistic.png</file>
+        <file>Themes/Green/cancel.png</file>
+        <file>Themes/Green/close.png</file>
+        <file>Themes/Green/delete.png</file>
+        <file>Themes/Green/finish.png</file>
+        <file>Themes/Green/frame.png</file>
     </qresource>
     <qresource prefix="/themes/red">
         <file>Themes/Red/Red_Theme.png</file>
@@ -53,6 +66,11 @@
         <file>Themes/Red/add.png</file>
         <file>Themes/Red/edit.png</file>
         <file>Themes/Red/statistic.png</file>
+        <file>Themes/Red/cancel.png</file>
+        <file>Themes/Red/close.png</file>
+        <file>Themes/Red/delte.png</file>
+        <file>Themes/Red/finish.png</file>
+        <file>Themes/Red/frame.png</file>
     </qresource>
     <qresource prefix="/alarmClock">
         <file>AlarmClock/Timer1.wav</file>

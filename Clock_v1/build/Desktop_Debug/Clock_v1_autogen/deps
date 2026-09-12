@@ -545,12 +545,14 @@ Clock_v1_autogen/timestamp: \
 	/usr/lib64/cmake/Qt6/QtPublicAppleHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicCMakeHelpers.cmake \
+	/usr/lib64/cmake/Qt6/QtPublicCMakeIncludeGuardHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicDependencyHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicExternalProjectHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicFinalizerHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicFindPackageHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicGitHelpers.cmake \
+	/usr/lib64/cmake/Qt6/QtPublicJsonHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicPluginHelpers.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicPluginHelpers_v2.cmake \
 	/usr/lib64/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake \

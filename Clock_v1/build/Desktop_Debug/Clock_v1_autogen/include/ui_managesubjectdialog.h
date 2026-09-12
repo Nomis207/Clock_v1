@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'managesubjectdialog.ui'
 **
-** Created by: Qt User Interface Compiler version 6.11.1
+** Created by: Qt User Interface Compiler version 6.11.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -34,18 +34,31 @@ public:
         subjectList = new QListWidget(ManageSubjectDialog);
         subjectList->setObjectName("subjectList");
         subjectList->setGeometry(QRect(20, 40, 256, 192));
+        subjectList->setStyleSheet(QString::fromUtf8(""));
         resetStudieTotal = new QPushButton(ManageSubjectDialog);
         resetStudieTotal->setObjectName("resetStudieTotal");
-        resetStudieTotal->setGeometry(QRect(50, 280, 96, 27));
+        resetStudieTotal->setGeometry(QRect(50, 280, 128, 32));
+        resetStudieTotal->setMinimumSize(QSize(128, 32));
+        resetStudieTotal->setMaximumSize(QSize(128, 32));
+        resetStudieTotal->setStyleSheet(QString::fromUtf8("border-image: url(:/themes/classic/Themes/classic/resetbtn.png);"));
         deletSubject = new QPushButton(ManageSubjectDialog);
         deletSubject->setObjectName("deletSubject");
-        deletSubject->setGeometry(QRect(240, 280, 96, 27));
+        deletSubject->setGeometry(QRect(240, 280, 128, 32));
+        deletSubject->setMinimumSize(QSize(128, 32));
+        deletSubject->setMaximumSize(QSize(128, 32));
+        deletSubject->setStyleSheet(QString::fromUtf8("border-image: url(:/themes/classic/Themes/classic/delete.png);"));
         addSubject = new QPushButton(ManageSubjectDialog);
         addSubject->setObjectName("addSubject");
-        addSubject->setGeometry(QRect(420, 280, 96, 27));
+        addSubject->setGeometry(QRect(480, 280, 32, 32));
+        addSubject->setMinimumSize(QSize(32, 32));
+        addSubject->setMaximumSize(QSize(32, 32));
+        addSubject->setStyleSheet(QString::fromUtf8("border-image: url(:/themes/classic/Themes/classic/add.png);"));
         close_studie = new QPushButton(ManageSubjectDialog);
         close_studie->setObjectName("close_studie");
-        close_studie->setGeometry(QRect(460, 10, 96, 27));
+        close_studie->setGeometry(QRect(420, 20, 128, 32));
+        close_studie->setMinimumSize(QSize(128, 32));
+        close_studie->setMaximumSize(QSize(128, 32));
+        close_studie->setStyleSheet(QString::fromUtf8("border-image: url(:/themes/classic/Themes/classic/close.png);"));
 
         retranslateUi(ManageSubjectDialog);
 
@@ -55,10 +68,10 @@ public:
     void retranslateUi(QDialog *ManageSubjectDialog)
     {
         ManageSubjectDialog->setWindowTitle(QCoreApplication::translate("ManageSubjectDialog", "Dialog", nullptr));
-        resetStudieTotal->setText(QCoreApplication::translate("ManageSubjectDialog", "resetTotal", nullptr));
-        deletSubject->setText(QCoreApplication::translate("ManageSubjectDialog", "delete", nullptr));
-        addSubject->setText(QCoreApplication::translate("ManageSubjectDialog", "+", nullptr));
-        close_studie->setText(QCoreApplication::translate("ManageSubjectDialog", "close", nullptr));
+        resetStudieTotal->setText(QString());
+        deletSubject->setText(QString());
+        addSubject->setText(QString());
+        close_studie->setText(QString());
     } // retranslateUi
 
 };

@@ -1106,7 +1106,7 @@
          <enum>QTabWidget::TabPosition::West</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
@@ -1263,12 +1263,27 @@
            <rect>
             <x>60</x>
             <y>40</y>
-            <width>96</width>
-            <height>27</height>
+            <width>128</width>
+            <height>32</height>
            </rect>
           </property>
+          <property name="minimumSize">
+           <size>
+            <width>128</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>128</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/themes/classic/Themes/classic/edit.png);</string>
+          </property>
           <property name="text">
-           <string>Edit_Studie</string>
+           <string/>
           </property>
          </widget>
         </widget>

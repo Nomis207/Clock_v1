@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.11.1
+** Created by: Qt User Interface Compiler version 6.11.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -645,7 +645,10 @@ public:
         tab_3->setObjectName("tab_3");
         Edit_Studie = new QPushButton(tab_3);
         Edit_Studie->setObjectName("Edit_Studie");
-        Edit_Studie->setGeometry(QRect(60, 40, 96, 27));
+        Edit_Studie->setGeometry(QRect(60, 40, 128, 32));
+        Edit_Studie->setMinimumSize(QSize(128, 32));
+        Edit_Studie->setMaximumSize(QSize(128, 32));
+        Edit_Studie->setStyleSheet(QString::fromUtf8("border-image: url(:/themes/classic/Themes/classic/edit.png);"));
         setting_Tab->addTab(tab_3, QString());
         Clock->addTab(settings, QString());
 
@@ -669,7 +672,7 @@ public:
         Clock->setCurrentIndex(2);
         clock_switch->setCurrentIndex(0);
         Statistics->setCurrentIndex(0);
-        setting_Tab->setCurrentIndex(1);
+        setting_Tab->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -727,7 +730,7 @@ public:
         shortCut_five->setText(QCoreApplication::translate("MainWindow", "ShortCut 5", nullptr));
         EditTimerShortcuts->setText(QCoreApplication::translate("MainWindow", "EditTimerShortcuts pls enter in Minutes", nullptr));
         setting_Tab->setTabText(setting_Tab->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Timer", nullptr));
-        Edit_Studie->setText(QCoreApplication::translate("MainWindow", "Edit_Studie", nullptr));
+        Edit_Studie->setText(QString());
         setting_Tab->setTabText(setting_Tab->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Studie", nullptr));
         Clock->setTabText(Clock->indexOf(settings), QCoreApplication::translate("MainWindow", "Settings", nullptr));
         menuClock_V1->setTitle(QCoreApplication::translate("MainWindow", "Clock_V1", nullptr));

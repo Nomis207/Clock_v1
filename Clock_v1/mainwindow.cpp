@@ -137,6 +137,7 @@ void MainWindow::applyAppThemes(AppThemes theme){
     QString fullFramePath       = path + "frame.png";
     QString fullAddPath         = path + "add.png";
     QString fullStatisticPath   = path + "statistic.png";
+    QString fullEditPath        = path + "edit.png";
 
     //themes
     QString fullClasicPath   = ":/themes/classic/Themes/classic/ClassicTheme.png";
@@ -191,6 +192,11 @@ void MainWindow::applyAppThemes(AppThemes theme){
     //studieStatistic
     ui->StatisticsSwitch->setIcon(QIcon(fullStatisticPath));
     ui->StatisticsSwitch->setIconSize(QSize(128, 32));
+
+    //settings
+    //studie
+    ui->Edit_Studie->setIcon(QIcon(fullEditPath));
+    ui->Edit_Studie->setIconSize(QSize(128,32));
 
     //themes
     ui->Classic_Theme->setIcon(QIcon(fullClasicPath));
@@ -263,6 +269,21 @@ void MainWindow::animateButtonClick(QPushButton *button, QSize normalSize, QSize
     animation->setKeyValueAt(0, normalSize);
     animation->setKeyValueAt(0.5, pressedSize);
     animation->setKeyValueAt(1, normalSize);
+    animation->start(QAbstractAnimation::DeleteWhenStopped);
+}
+
+void MainWindow::animateButtonGeometry(QWidget *widget){
+
+    QPropertyAnimation *animation = new QPropertyAnimation(widget, "geometry");
+    animation->setDuration(150);
+
+    QRect normalGeo = widget->geometry();
+
+    QRect pressedGeo = normalGeo.adjusted(4, 4, -4, -4);
+
+    animation->setKeyValueAt(0, normalGeo);
+    animation->setKeyValueAt(0.5, pressedGeo);
+    animation->setKeyValueAt(1, normalGeo);
     animation->start(QAbstractAnimation::DeleteWhenStopped);
 }
 
@@ -615,6 +636,7 @@ void MainWindow::on_coustom_shortcut_1_clicked()
         TimerMinute = shortCut1;
     }
     updateTimer();
+    animateButtonGeometry(ui->coustom_shortcut_1);
 }
 
 void MainWindow::on_coustom_shortcut_2_clicked()
@@ -630,6 +652,7 @@ void MainWindow::on_coustom_shortcut_2_clicked()
         TimerMinute = shortCut2;
     }
     updateTimer();
+    animateButtonGeometry(ui->coustom_shortcut_2);
 }
 
 void MainWindow::on_coustom_shortcut_3_clicked()
@@ -645,6 +668,7 @@ void MainWindow::on_coustom_shortcut_3_clicked()
         TimerMinute = shortCut3;
     }
     updateTimer();
+    animateButtonGeometry(ui->coustom_shortcut_3);
 }
 
 void MainWindow::on_coustom_shortcut_4_clicked()
@@ -660,6 +684,7 @@ void MainWindow::on_coustom_shortcut_4_clicked()
         TimerMinute = shortCut4;
     }
     updateTimer();
+    animateButtonGeometry(ui->coustom_shortcut_4);
 }
 
 void MainWindow::on_coustom_shortcut_5_clicked()
@@ -675,6 +700,7 @@ void MainWindow::on_coustom_shortcut_5_clicked()
         TimerMinute = shortCut5;
     }
     updateTimer();
+    animateButtonGeometry(ui->coustom_shortcut_5);
 }
 //studie
 
@@ -724,12 +750,12 @@ void MainWindow::on_start_stop_studie_clicked(){
             ui->studie_total->setText(gesamtZeit.toString("hh:mm:ss"));
         }
 
-        // 2. AKTUELLE SITZUNG EBENFALLS RUNDEN (Das hat gefehlt!)
-        int sessionMs = studieTime.msecsSinceStartOfDay(); // Holt die bisherigen Millisekunden
-        int roundedSessionMs = (sessionMs / 1000) * 1000;  // Schneidet die Reste ab
 
-        studieTime.setHMS(0, 0, 0, 0);                     // Setzt die Uhr auf 0
-        studieTime = studieTime.addMSecs(roundedSessionMs);// Fügt nur die glatten Sekunden wieder ein
+        int sessionMs = studieTime.msecsSinceStartOfDay();
+        int roundedSessionMs = (sessionMs / 1000) * 1000;
+
+        studieTime.setHMS(0, 0, 0, 0);
+        studieTime = studieTime.addMSecs(roundedSessionMs);
         ui->studie_time->setText(studieTime.toString("hh:mm:ss"));
     }
 
@@ -906,8 +932,13 @@ void MainWindow::on_Darkmode_checkStateChanged(const Qt::CheckState &arg1)
 
 void MainWindow::on_Edit_Studie_clicked(){
     ManageSubjectDialog dialog(this);
-    dialog.exec();
 
+    animateButtonClick(ui->Edit_Studie, QSize(128,32), QSize(100, 24));
+    ThemeData data = getThemeData(currentTheme);
+
+    dialog.applyTheme(data.iconPrefix);
+
+    dialog.exec();
     refreshSubjectBox();
 }
 

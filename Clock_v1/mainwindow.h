@@ -170,6 +170,7 @@ private:
 
     //animation
     void animateButtonClick(QPushButton *button, QSize normalSize, QSize pressedSize);
+    void animateButtonGeometry(QWidget *widget);
 
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
